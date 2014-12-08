@@ -8,3 +8,5 @@ Rake::TestTask.new do |t|
   t.warning = true
   t.pattern = "test/archloot/*_test.rb"
 end
+
+task :default => :test
