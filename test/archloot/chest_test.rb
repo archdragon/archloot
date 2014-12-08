@@ -40,7 +40,7 @@ module Archloot
       describe "for every successful drop" do
         before do
           @lucky_drop = Drop.new("Gold ring of regeneration")
-          @lucky_drop.randomize_using {0}
+          @lucky_drop.randomize_using { 0 }
 
           @lucky_chest = Chest.new
           @lucky_chest.add(@lucky_drop)
@@ -48,6 +48,20 @@ module Archloot
         end
         it "generates an item" do
           @lucky_chest.droplist.length.must_be :==, 1
+        end
+      end
+
+      describe "for unsuccessful drops" do
+        before do
+          @unlucky_drop = Drop.new("Gold ring of regeneration")
+          @unlucky_drop.randomize_using { 1 }
+
+          @unlucky_chest = Chest.new
+          @unlucky_chest.add(@unlucky_drop)
+          @unlucky_chest.droplist
+        end
+        it "doesn't generate an item" do
+          @unlucky_chest.droplist.length.must_be :==, 0
         end
       end
     end # describe #generate
