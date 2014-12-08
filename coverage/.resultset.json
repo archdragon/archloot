@@ -1,0 +1,61 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "c:/Sites/my_gems/archloot/test/archloot/droplist_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "c:/Sites/my_gems/archloot/test/archloot/drop_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1418080999
+  }
+}
