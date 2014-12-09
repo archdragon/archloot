@@ -5,6 +5,7 @@ module Archloot
     describe "#successful?" do
       context "with max. drop chance" do
         let(:drop) { FactoryGirl.build :drop_lucky }
+
         it "is successful" do
           expect(drop.successful?).to eq(true)
         end
@@ -12,6 +13,7 @@ module Archloot
 
       context "with min. drop chance" do
         let(:drop) { FactoryGirl.build :drop_unlucky }
+
         it "is not successful" do
           expect(drop.successful?).to eq(false)
         end
@@ -20,6 +22,7 @@ module Archloot
 
     describe "#randomize_using" do
       let(:drop) { FactoryGirl.build :drop }
+
       it "uses a block for randomization" do
         random_number = rand(1.0)
         drop.randomize_using { random_number }
@@ -30,6 +33,7 @@ module Archloot
 
     describe "#rand" do
       let(:drop) { FactoryGirl.build :drop }
+      
       it "returns a float" do
         expect(drop.rand).to be_kind_of(Float)
       end
