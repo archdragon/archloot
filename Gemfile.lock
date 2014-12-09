@@ -16,6 +16,7 @@ GEM
     mime-types (2.4.3)
     minitest (5.4.3)
     multi_json (1.10.1)
+    rake (10.3.2)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     simplecov (0.9.1)
@@ -36,3 +37,4 @@ DEPENDENCIES
   bundler
   coveralls
   minitest
+  rake
