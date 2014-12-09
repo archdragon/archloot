@@ -1,12 +1,10 @@
 require 'bundler'
-require 'rake/testtask'
+require 'rspec/core/rake_task'
 
 Bundler::GemHelper.install_tasks
 
-Rake::TestTask.new do |t|
-  t.libs = ["lib", "test"]
-  t.warning = true
-  t.pattern = "test/archloot/*_test.rb"
+RSpec::Core::RakeTask.new(:spec) do |task|
+  task.rspec_opts = ['--color']
 end
 
-task :default => :test
+task :default => :spec
