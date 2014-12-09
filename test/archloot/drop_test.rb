@@ -6,6 +6,19 @@ module Archloot
       @drop = Drop.new("Legendary ring of spec")
     end
 
+    Class.new(self) do
+      before do
+        @drop = Drop.new("Epic potion on tests")
+        @drop_with_hash = Drop.new({name: "Weird item", weirdness: 9001})
+      end
+      it "is initialized with an item string" do
+        @drop.item.must_be_kind_of String
+      end
+      it "is initialized with an item hash" do
+        @drop_with_hash.item.must_be_kind_of Hash
+      end
+    end
+
     it "has an item" do
       @drop.item.wont_be_nil
     end
