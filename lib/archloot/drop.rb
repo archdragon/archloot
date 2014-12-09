@@ -17,8 +17,6 @@ module Archloot
       @randomize_proc = block
     end
 
-    private
-
     def rand
       @randomize_proc.call
     end

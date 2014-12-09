@@ -1,8 +1,8 @@
-puts "---- DROP.RB"
-
 FactoryGirl.define do
-  factory :drop do
-    item "Magical ring of Spec"
+  factory :drop, :class => Archloot::Drop do
+    initialize_with do
+      new("Magical ring of Spec")
+    end    
     factory :drop_lucky do
       chance 1
     end
