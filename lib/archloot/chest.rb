@@ -1,37 +1,38 @@
 module Archloot
   class Chest
     attr_accessor :drops_limit
-    attr_reader :drops
+    attr_reader :potential_droplist
 
     def initialize
-      @drops = []
       @drops_limit = 1
+      @potential_droplist = Droplist.new
     end
 
-    def add(item)
-      @drops << item
+    # Adds a drop to the potential drops pool.
+    def add(drop)
+      @potential_droplist.add(drop)
     end
 
-    def droplist
-      @droplist ||= generate_droplist
+    # List of the drops that will be spawned.
+    def final_droplist
+      @final_droplist ||= generate_final_droplist
     end
 
     private
 
-    def generate_droplist
+    def generate_final_droplist
       drops_count = 0
-      item_list = []
 
-      @droplist = Droplist.new
+      @final_droplist = Droplist.new
 
-      @drops.each do |drop|
+      @potential_droplist.each do |drop|
         if drop.successful?
-          @droplist.add(drop)
-          break if @droplist.length > @drops_limit
+          @final_droplist.add(drop)
         end
+        break if @final_droplist.length > @drops_limit
       end
 
-      @droplist
+      @final_droplist
     end
 
   end
