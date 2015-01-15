@@ -18,6 +18,7 @@ module Archloot
       end
       context "drops were successful" do
         let(:drop_lucky) { FactoryGirl.build :drop_lucky }
+        before { allow(drop_lucky).to receive(:successful?).and_return(true) }
         it "contains every successful drop" do
           chest_lucky.add(drop_lucky)
           expect(chest_lucky.final_droplist.length).to eq(1)
