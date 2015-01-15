@@ -7,8 +7,7 @@ require 'coveralls'
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
+  config.raise_errors_for_deprecations!
 end
-
-
 
 Coveralls.wear!
