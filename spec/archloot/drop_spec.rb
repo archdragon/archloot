@@ -3,8 +3,8 @@ require 'spec_helper'
 module Archloot
   describe Drop do
     let(:basic_drop) { FactoryGirl.build :drop }
-    it "carries information about the drop" do
-      expect(basic_drop.data).not_to be_nil
+    it "carries information about the item" do
+      expect(basic_drop.item).not_to be_nil
     end
 
     describe "#successful?" do
