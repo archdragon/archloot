@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    archloot (0.0.2)
+    archloot (0.1.2)
 
 GEM
   remote: http://rubygems.org/
