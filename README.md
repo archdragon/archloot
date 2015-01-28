@@ -6,13 +6,15 @@ Quick and simple loot table creation.
 
 ## Examples:
 
-    # First, create a chest - a container for your drops
+First, create a chest - a container for your drops
+
     chest = Chest.new
 
-    # Initlialize your item
-    # It can be anything - Archloot class will accept any object
-    your_item = YourItemClass.new(.....)
-    your_item2 = YourItemClass.new(.....)
+Initlialize your item
+It can be anything - Archloot class will accept any object
+
+    your_item = YourItemClass.new({name: "Random Ring of Spec"})
+    your_item2 = YourItemClass.new({name: "Talisman of Testing"})
 
     first_drop = Drop.new(your_item)
     second_drop = Drop.new(your_item2)
