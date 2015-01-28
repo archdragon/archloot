@@ -1,22 +1,24 @@
 module Archloot
   class Drop
-    attr_accessor :data
+    attr_accessor :item
     attr_accessor :chance
     attr_accessor :random_number_generator
 
     # Assign information about the drop.
     #
     # ==== Examples.
-    #   Drop.new({name: "Some item", id: 9, quality: "good"})
+    #   Drop.new({item: YourItemObject.new, chance: 0.5})
     #
-    #   Drop.new({name: "Some item", random_number_generator: MyGenerator.new})
+    #   Drop.new({item: YourItemObject.new, random_number_generator: MyGenerator.new})
     #
     #   @magical_item = Item.new({id: 113})
-    #   Drop.new(@magical_item)
-    def initialize(data, random_number_generator = Archloot::RandomNumberGenerator.new)
-      @data = data
+    #   Drop.new({item: @magical_item})
+    def initialize(item: nil, chance: 1, random_number_generator: Archloot::RandomNumberGenerator.new)
+      raise ArgumentError, "You have to pass an item object" if item.nil?
+
+      @item = item
       @random_number_generator = random_number_generator
-      @chance = 1
+      @chance = chance
       randomize_using { Random.rand(1.0) }
     end
 
