@@ -14,7 +14,7 @@ module Archloot
     end
 
     # List of the drops that will be spawned.
-    def final_droplist
+    def get_drops
       @final_droplist ||= generate_final_droplist
     end
 
