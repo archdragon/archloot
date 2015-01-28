@@ -16,8 +16,8 @@ It can be anything - Archloot class will accept any object
     your_item = YourItemClass.new({name: "Random Ring of Spec"})
     your_item2 = YourItemClass.new({name: "Talisman of Testing"})
 
-    first_drop = Drop.new(your_item)
-    second_drop = Drop.new(your_item2)
+    first_drop = Drop.new({item: your_item, chance: 0.25})
+    second_drop = Drop.new({item: your_item2, chance: 0.95})
 
     chest.add(first_drop)
     chest.add(second_drop)
