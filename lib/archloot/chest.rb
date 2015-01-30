@@ -20,19 +20,22 @@ module Archloot
 
     private
 
+    # Get a list of all drops that will be spawned by the chest
     def generate_final_droplist
       drops_count = 0
 
       @final_droplist = Droplist.new
 
-      @potential_droplist.each do |drop|
-        if drop.successful?
-          @final_droplist.add(drop)
-        end
-        break if @final_droplist.length > @drops_limit
-      end
+      @potential_droplist.each { |drop| process_potential_drop(drop) }
 
       @final_droplist
+    end
+
+    # Check if the potential drop will be given to the player after opening a chest
+    def process_potential_drop(drop)
+      if drop.successful? && @final_droplist.length < @drops_limit
+        @final_droplist.add(drop)
+      end
     end
 
   end
