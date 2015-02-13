@@ -1,4 +1,5 @@
 require 'archloot/chest'
 require 'archloot/drop'
 require 'archloot/droplist'
+require 'archloot/droplist_filter'
 require 'archloot/random_number_generator'
