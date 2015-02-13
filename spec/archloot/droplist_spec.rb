@@ -38,5 +38,16 @@ module Archloot
       end
     end
 
+    describe "#sample" do
+      let(:droplist) { FactoryGirl.build :droplist }
+      let(:drop) { FactoryGirl.build :drop }
+      let(:sample_count) { 1 }
+      it "returns a set number of drops" do
+        droplist.add(drop)
+        droplist.add(drop)
+        expect(droplist.sample(sample_count).length).to eq sample_count
+      end
+    end
+
   end
 end
