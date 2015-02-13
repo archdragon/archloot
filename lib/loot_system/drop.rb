@@ -13,7 +13,7 @@ module LootSystem
     #
     #   @magical_item = Item.new({id: 113})
     #   Drop.new({item: @magical_item})
-    def initialize(item: nil, chance: 1, random_number_generator: Archloot::RandomNumberGenerator.new)
+    def initialize(item: nil, chance: 1, random_number_generator: RandomNumberGenerator.new)
       raise ArgumentError, "You have to pass an item object" if item.nil?
 
       @item = item
