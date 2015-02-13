@@ -1,6 +1,9 @@
-[![Code Climate](https://codeclimate.com/github/archdragon/loot_system/badges/gpa.svg)](https://codeclimate.com/github/archdragon/loot_system)
-[![Build Status](https://travis-ci.org/archdragon/loot_system.svg?branch=master)](https://travis-ci.org/archdragon/loot_system)
-[![Coverage Status](https://coveralls.io/repos/archdragon/loot_system/badge.svg?branch=master)](https://coveralls.io/r/archdragon/loot_system?branch=master)
+<p align="center">
+  <img src="http://krowinski.com/files/loot_system/img/logo.png" alt="Loot System Gem"/>
+  [![Code Climate](https://codeclimate.com/github/archdragon/loot_system/badges/gpa.svg)](https://codeclimate.com/github/archdragon/loot_system)
+  [![Build Status](https://travis-ci.org/archdragon/loot_system.svg?branch=master)](https://travis-ci.org/archdragon/loot_system)
+  [![Coverage Status](https://coveralls.io/repos/archdragon/loot_system/badge.svg?branch=master)](https://coveralls.io/r/archdragon/loot_system?branch=master)
+</p>
 
 # Loot System:
 
