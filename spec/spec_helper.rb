@@ -1,4 +1,4 @@
-require 'archloot'
+require 'loot_system'
 
 require 'bundler/setup'
 require 'factory_girl'
