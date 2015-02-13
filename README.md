@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/archdragon/archloot.svg?branch=master)](https://travis-ci.org/archdragon/archloot) [![Coverage Status](https://coveralls.io/repos/archdragon/archloot/badge.svg?branch=master)](https://coveralls.io/r/archdragon/archloot?branch=master)
+[![Code Climate](https://codeclimate.com/github/archdragon/archloot/badges/gpa.svg)](https://codeclimate.com/github/archdragon/archloot)
+[![Build Status](https://travis-ci.org/archdragon/archloot.svg?branch=master)](https://travis-ci.org/archdragon/archloot)
+[![Coverage Status](https://coveralls.io/repos/archdragon/archloot/badge.svg?branch=master)](https://coveralls.io/r/archdragon/archloot?branch=master)
 
 # Archloot
 
