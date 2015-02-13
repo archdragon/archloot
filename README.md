@@ -19,21 +19,22 @@ Quick and simple loot table creation.
 
 ## Examples:
 
-First, create a chest - a container for your drops
+1. First, create a chest - a container for your drops
 
     chest = LootSystem::Chest.new
 
-Initlialize your item
-It can be anything - Drop class will accept any object
+2. Initlialize your item
+
+  It can be anything - Drop class will accept any object
 
     first_drop = LootSystem::Drop.new({item: your_item, chance: 0.25})
     second_drop = LootSystem::Drop.new({item: your_item2, chance: 0.95})
 
-Now we can add the drops to our container:
+3. Now we can add the drops to our container:
 
     chest.add(first_drop)
     chest.add(second_drop)
 
-And use get_drops method to get a list of all the that we managed to find:
+4. Use get_drops method to get a list of all the that we managed to find:
 
     chest.get_drops
