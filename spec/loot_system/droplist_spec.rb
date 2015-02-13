@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Archloot
+module LootSystem
   describe Droplist do
     describe "#length" do
       let(:droplist) { FactoryGirl.build :droplist }

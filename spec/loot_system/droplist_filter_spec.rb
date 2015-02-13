@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Archloot
+module LootSystem
   describe DroplistFilter do
     let(:droplist) { FactoryGirl.build :droplist }
     describe "#limit" do

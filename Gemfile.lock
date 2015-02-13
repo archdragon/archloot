@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    archloot (0.1.3)
+    Loot System (0.1.3)
 
 GEM
   remote: http://rubygems.org/
@@ -62,7 +62,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  archloot!
+  Loot System!
   bundler
   codeclimate-test-reporter
   coveralls

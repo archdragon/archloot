@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Archloot
+module LootSystem
   describe Drop do
     let(:basic_drop) { FactoryGirl.build :drop }
     it "carries information about the item" do

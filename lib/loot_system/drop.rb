@@ -1,4 +1,4 @@
-module Archloot
+module LootSystem
   class Drop
     attr_accessor :item
     attr_accessor :chance

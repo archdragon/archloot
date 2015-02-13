@@ -1,4 +1,4 @@
-module Archloot
+module LootSystem
   class Droplist
     include Enumerable
     attr_reader :drops

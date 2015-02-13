@@ -1,4 +1,4 @@
-module Archloot
+module LootSystem
   class Chest
     attr_accessor :drops_limit
     attr_reader :potential_droplist

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Archloot
+module LootSystem
   describe Chest do
     describe "#add" do
       let(:chest) { FactoryGirl.build :chest }

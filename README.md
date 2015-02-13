@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/archdragon/archloot.svg?branch=master)](https://travis-ci.org/archdragon/archloot)
 [![Coverage Status](https://coveralls.io/repos/archdragon/archloot/badge.svg?branch=master)](https://coveralls.io/r/archdragon/archloot?branch=master)
 
-# Archloot
+# Loot System 
 
 Quick and simple loot table creation.
 
