@@ -2,7 +2,7 @@ module Archloot
   class Droplist
     include Enumerable
     attr_reader :drops
-    
+
     def initialize
       @drops = []
     end
@@ -19,6 +19,10 @@ module Archloot
       @drops.each do |drop|
         block.call(drop)
       end
+    end
+
+    def sample(limit=1)
+      @drops.sample(limit)
     end
   end
 end
