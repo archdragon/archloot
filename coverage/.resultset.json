@@ -73,7 +73,7 @@
   },
   "RSpec": {
     "coverage": {
-      "/home/arch/Sites/archloot/spec/archloot/drop_spec.rb": [
+      "/home/arch/Sites/loot_system/spec/loot_system/drop_spec.rb": [
         1,
         null,
         1,
@@ -126,7 +126,7 @@
         null,
         null
       ],
-      "/home/arch/Sites/archloot/spec/archloot/droplist_filter_spec.rb": [
+      "/home/arch/Sites/loot_system/spec/loot_system/droplist_filter_spec.rb": [
         1,
         null,
         1,
@@ -146,7 +146,7 @@
         null,
         null
       ],
-      "/home/arch/Sites/archloot/spec/archloot/droplist_spec.rb": [
+      "/home/arch/Sites/loot_system/spec/loot_system/droplist_spec.rb": [
         1,
         null,
         1,
@@ -201,7 +201,7 @@
         null,
         null
       ],
-      "/home/arch/Sites/archloot/spec/archloot/random_number_generator_spec.rb": [
+      "/home/arch/Sites/loot_system/spec/loot_system/random_number_generator_spec.rb": [
         1,
         null,
         1,
@@ -218,6 +218,6 @@
         null
       ]
     },
-    "timestamp": 1423836455
+    "timestamp": 1423856886
   }
 }
