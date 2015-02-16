@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "loot_system/version"
 
 Gem::Specification.new do |s|
-  s.name        = "Loot System"
+  s.name        = "loot_system"
   s.version     = LootSystem::VERSION
   s.date        = "2014-12-08"
   s.summary     = "Simple loot system creation"
