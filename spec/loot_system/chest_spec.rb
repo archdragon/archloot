@@ -2,10 +2,10 @@ require 'spec_helper'
 
 module LootSystem
   describe Chest do
-    describe "#add_drop" do
+    describe "#add" do
       let(:chest) { FactoryGirl.build :chest }
       it "adds a new potential drop" do 
-        chest.add_drop({item: "Test item", chance: 0.99})
+        chest.add({item: "Test item", chance: 0.99})
         expect(chest.potential_droplist.length).to eq(1)
       end
     end
@@ -19,7 +19,7 @@ module LootSystem
         let(:drop_lucky) { FactoryGirl.build :drop_lucky }
         before { allow(drop_lucky).to receive(:successful?).and_return(true) }
         it "contains every successful drop" do
-          chest_lucky.add_drop({item: drop_lucky.item, chance: drop_lucky.chance} )
+          chest_lucky.add({item: drop_lucky.item, chance: drop_lucky.chance} )
           expect(chest_lucky.get_drops.length).to eq(1)
         end
       end
