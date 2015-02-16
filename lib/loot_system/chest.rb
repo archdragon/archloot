@@ -9,8 +9,8 @@ module LootSystem
     end
 
     # Adds a drop to the potential drops pool.
-    def add(drop)
-      @potential_droplist.add(drop)
+    def add_drop(params)
+      @potential_droplist.add(Drop.new(params))
     end
 
     # List of the drops that will be spawned.
