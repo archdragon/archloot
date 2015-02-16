@@ -12,17 +12,11 @@ First, create a chest - a container for your drops
 
     chest = LootSystem::Chest.new
 
-Initlialize your item
-It can be anything - Drop class will accept any object
+Now we can add the items to our container:
 
-    first_drop = LootSystem::Drop.new({item: your_item, chance: 0.25})
-    second_drop = LootSystem::Drop.new({item: your_item2, chance: 0.95})
+    chest.add({item: common_item_object, chance: 0.9})
+    chest.add({item: rare_item_object, chance: 0.01})
 
-Now we can add the drops to our container:
+And use items_found method to get a list of all item that we managed to find:
 
-    chest.add(first_drop)
-    chest.add(second_drop)
-
-And use get_drops method to get a list of all the that we managed to find:
-
-    chest.get_drops
+    chest.item_found
