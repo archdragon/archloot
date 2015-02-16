@@ -14,7 +14,7 @@ module LootSystem
     end
 
     # List of the drops that will be spawned.
-    def get_drops
+    def items_found
       @final_droplist ||= generate_final_droplist
     end
 
