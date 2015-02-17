@@ -25,10 +25,10 @@ First, create a chest - a container for your drops
 
 Now we can add the items to our container:
 
-    chest.add({item: common_item_object, chance: 0.9})
-    chest.add({item: rare_item_object, chance: 0.01})
+    chest.add(item: common_item_object, chance: 0.9)
+    chest.add(item: rare_item_object, chance: 0.01)
 
 And use items_found method to get a list of all item that we managed to find:
 
-    chest.item_found
+    chest.items_found
 
