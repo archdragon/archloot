@@ -28,9 +28,7 @@ module LootSystem
 
     # Check if the potential drop will be given to the player after opening a chest
     def process_potential_drop(drop)
-      if drop.successful?
-        @final_droplist.add(drop)
-      end
+      @final_droplist.add(drop) if drop.successful?
     end
 
   end
