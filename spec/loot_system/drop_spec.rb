@@ -25,20 +25,9 @@ module LootSystem
       end
     end
 
-    describe "#randomize_using" do
-      let(:drop) { FactoryGirl.build :drop }
-
-      it "uses a block for randomization" do
-        random_number = rand(1.0)
-        drop.randomize_using { random_number }
-        proc = drop.instance_variable_get("@randomize_proc")
-        expect(proc.call).to eq(random_number)
-      end
-    end
-
     describe "#rand" do
       let(:drop) { FactoryGirl.build :drop }
-      
+
       it "returns a float" do
         expect(drop.rand).to be_kind_of(Float)
       end
