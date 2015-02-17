@@ -13,13 +13,10 @@ module LootSystem
     #
     #   @magical_item = Item.new({id: 113})
     #   Drop.new({item: @magical_item})
-    def initialize(item: nil, chance: 1, random_number_generator: RandomNumberGenerator.new)
-      raise ArgumentError, "You have to pass an item object" if item.nil?
-
+    def initialize(item:, chance: 1, random_number_generator: RandomNumberGenerator.new, hours: (0..23))
       @item = item
       @random_number_generator = random_number_generator
       @chance = chance
-      randomize_using { Random.rand(1.0) }
     end
 
     # Returns true if this Drop will be spawned.
@@ -27,14 +24,16 @@ module LootSystem
       (rand < chance)
     end
 
-    # Allows to define custom block that will be used for random number generation.
-    def randomize_using(&block)
-      @randomize_proc = block
-    end
-
     # Performs random number generation
     def rand
       random_number_generator.rand
+    end
+
+    private
+
+    def valid_hour?
+      t = Time.now
+      @hours === t.hour
     end
   end
 end
