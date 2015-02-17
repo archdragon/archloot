@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Loot System (0.22.3)
+    loot_system (0.2)
 
 GEM
   remote: http://rubygems.org/
@@ -62,10 +62,10 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  Loot System!
   bundler
   codeclimate-test-reporter
   coveralls
   factory_girl
+  loot_system!
   rake
   rspec
