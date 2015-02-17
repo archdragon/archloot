@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    loot_system (0.2)
+    loot_system (0.2.1)
 
 GEM
   remote: http://rubygems.org/
