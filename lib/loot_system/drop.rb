@@ -2,7 +2,7 @@ module LootSystem
   class Drop
     attr_accessor :item
     attr_accessor :chance
-    attr_accessor :random_number_generator
+    attr_writer :random_number_generator
 
     # Assign information about the drop.
     #
@@ -26,7 +26,7 @@ module LootSystem
 
     # Performs random number generation
     def rand
-      random_number_generator.rand
+      @random_number_generator.rand
     end
 
     private
