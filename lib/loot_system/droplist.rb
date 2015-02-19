@@ -21,8 +21,8 @@ module LootSystem
       end
     end
 
-    def sample(limit = 1)
-      @drops.sample if limit == 1
+    def sample(limit=1)
+      return @drops.sample if limit == 1
       @drops.sample(limit)
     end
   end
