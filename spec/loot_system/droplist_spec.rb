@@ -41,11 +41,19 @@ module LootSystem
     describe "#sample" do
       let(:droplist) { FactoryGirl.build :droplist }
       let(:drop) { FactoryGirl.build :drop }
-      let(:sample_count) { 1 }
-      it "returns a set number of drops" do
-        droplist.add(drop)
-        droplist.add(drop)
-        expect(droplist.sample(sample_count).length).to eq sample_count
+      context "when the count is > 1" do
+        let(:sample_count) { 2 }
+        it "returns a set number of drops" do
+          droplist.add(drop)
+          droplist.add(drop)
+          expect(droplist.sample(sample_count).length).to eq sample_count
+        end
+      end
+      context "without a parameter" do
+        it "returns a drop object" do
+          droplist.add(drop)
+          expect(droplist.sample).to be_kind_of(Object)
+        end
       end
     end
 
