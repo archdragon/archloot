@@ -6,7 +6,7 @@ module LootSystem
     describe "#limit" do
       let(:drop) { FactoryGirl.build :drop }
       let(:another_drop) { FactoryGirl.build :drop }
-      let(:sample_count) { 1 }
+      let(:sample_count) { 2 }
       it "returns a limited number of elements" do
         droplist.add(drop)
         droplist.add(another_drop)
