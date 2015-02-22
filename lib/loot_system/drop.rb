@@ -2,6 +2,7 @@ module LootSystem
   class Drop
     attr_accessor :item
     attr_accessor :chance
+    attr_reader :count
     attr_writer :random_number_generator
 
     # Assign information about the drop.
