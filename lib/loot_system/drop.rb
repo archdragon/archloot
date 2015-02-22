@@ -18,7 +18,7 @@ module LootSystem
       @item = item
       @random_number_generator = random_number_generator
       @chance = chance
-      @count = count(min, max)
+      @count = randomize_item_count(min, max)
     end
 
     # Returns true if this Drop will be spawned.
@@ -38,7 +38,7 @@ module LootSystem
       @hours === t.hour
     end
 
-    def count(min, max)
+    def randomize_item_count(min, max)
       (min..max).to_a.sample
     end
   end
