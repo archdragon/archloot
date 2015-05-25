@@ -1,10 +1,12 @@
-require 'loot_system'
+require_relative '../lib/loot_system/item'
+require_relative '../lib/loot_system/item_options'
+require_relative '../lib/loot_system/item_pool'
 
 require 'bundler/setup'
 require 'factory_girl'
 require 'factories'
 require 'coveralls'
-require "codeclimate-test-reporter"
+require 'codeclimate-test-reporter'
 
 CodeClimate::TestReporter.start
 
