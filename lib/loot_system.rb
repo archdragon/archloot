@@ -1,5 +1,1 @@
-require 'loot_system/chest'
-require 'loot_system/drop'
-require 'loot_system/droplist'
-require 'loot_system/droplist_filter'
-require 'loot_system/random_number_generator'
+require 'loot_system/item_pool'
