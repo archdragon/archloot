@@ -18,13 +18,26 @@ module LootSystem
       end
     end
     describe '#get_found' do
-      it 'returns an array of items that were found' do
+      let(:item_data) { {item: 'Lucky item', count: 1} }
+      it 'returns a list of items that were found' do
+        item_pool = ItemPool.new
+        item_pool.add('Amulet of Loot', chance: 1)
+        item_pool.add('Old Ring of Rspec', chance: 1)
+        item_pool.add('Old Ring of Rspec', chance: 1)
+        expect(item_pool.get_found.count).to eq(3)
       end
       context 'if the list contains an item that has a 100% chance of spawning' do
         it 'returns that item' do
           item_pool = ItemPool.new
-          item_pool.add('Lucky item', chance: 1)
-          expect(item_pool.get_found).to include('Lucky item')
+          item_pool.add(item_data[:item], chance: 1)
+          expect(item_pool.get_found).to include(item_data)
+        end
+      end
+      context 'if the list contains an item that has a 0% chance of spawning' do
+        it 'does not returns that item' do
+          item_pool = ItemPool.new
+          item_pool.add(item_data[:item], chance: 0)
+          expect(item_pool.get_found).to_not include(item_data[:item])
         end
       end
     end
