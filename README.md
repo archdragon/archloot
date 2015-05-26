@@ -19,16 +19,26 @@ Quick and simple loot table creation.
 
 ## How to use:
 
-First, create a chest - a container for your drops
+First, create a list of potential items.
 
-    chest = LootSystem::Chest.new
+As the name suggests it will contain all the items that have a chance be be retrieved later.
 
-Now we can add the items to our container:
+```ruby
+item_pool = LootSystem::ItemPool.new
+```
 
-    chest.add(item: common_item_object, chance: 0.9)
-    chest.add(item: rare_item_object, chance: 0.01)
+Now we can add the items to our list:
 
-And use items_found method to get a list of all item that we managed to find:
+```ruby
+item_pool.add(item1, chance: 0.9)
+item_pool.add(item2, chance: 0.01)
+```
 
-    chest.items_found
+Where `item1` (and `item2`) can be anything - a number, a string or any other object.
+
+And use the `get_found` method to get a list of all item that we managed to find:
+
+```ruby
+item_pool.get_found
+```
 
